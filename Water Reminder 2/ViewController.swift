@@ -10,11 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var textAdd: UITextField!
+    
+    @IBOutlet var textField: UITextView!
+    
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+      
+        
     }
 
-
+    @IBAction func didTapButton(_ sender: Any) {
+        if let text = textAdd.text {
+            if text == "" {
+                return
+            }
+            textField.text.append("\(text)\n\n")
+            textAdd.text = ""
+            textAdd.resignFirstResponder()
+        }
+    }
+    
 }
 
