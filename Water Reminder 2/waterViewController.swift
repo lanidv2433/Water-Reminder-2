@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class waterViewController: UIViewController {
 
     @IBOutlet var textAdd: UITextField!
     
